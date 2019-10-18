@@ -15,28 +15,36 @@ body{
       left: 50%;
       transform: (-50,-50);
       background-color: rgba(27,31,34,0.85);
-      background-image: url(images/nature.jpg);
+      background-image: url(images/bg.jpg); width:100%;
  }
 h1{
-  font-size: 2.1rem;
+  font-size: 3.1rem;
   line-height: 1.4rem;
   letter-spacing: 0.5rem;
   text-align: center;
   color: black;
-  margin-top:50px; 
+  padding-top: 0px; 
+  position: relative;
 }  
 p{
   text-align: center;
   color: black;
+  font-size: 2.5rem;
 }     
 .mySlides {
   display: none
 }
-img {
+.img1{
   vertical-align: middle;
   height: 700px;
 }
-
+.ccetlogo{	
+  height: 80%;
+  width: 19%;
+  margin-left: 650px;
+  padding-top: 20px;
+  align-items: center;
+}
 /* Slideshow container */
 .slideshow-container {
   width: 100%;
@@ -73,9 +81,7 @@ img {
   color: black;
   font-size: 15px;
   padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
+    width: 100%;
   text-align: center;
 }
 /* Number text (1/3 etc) */
@@ -92,6 +98,7 @@ img {
   height: 15px;
   width: 15px;
   margin: 0 2px;
+  margin-left: 30px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -118,53 +125,80 @@ img {
 </style>
 </head>
 <body>
-<h1>DISCRETE STRUCTURES</h1>
 <div class="slideshow-container">
+		<img src="images/ccetLogoBlack.png" class="ccetlogo">
+		<h1>DISCRETE STRUCTURES</h1>
+</div>		
 <div class="mySlides fade">
   <div class="numbertext">1 / 8</div>
 </div>
-<section>
 <div class="mySlides fade">
   <div class="numbertext">2 / 8</div>
-  <img src="images/img_snow_wide.jpg" style="width:100%">
-  <div class="text">Shortest path in a weighted graph is the minimum distance between any two vertices</div>
+  <div class="text">
+  	<p><u>Weighted Graph?</u>
+  	A graph having weights i.e. a certain value assigned to the edges.<br><br><br>
+	<img src="images/w1.png">
+  </p>
+  </div>
 </div>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 8</div>
+  <div class="text">
+  	<p><u>Shortest Path</u><br>
+  		It is the path that one can take to travel the minimum distance in order to reach a particular destination.<br><br>
+	<img src="images/map.png">
+  </div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 8</div>
+  <div class="text">
+  	<p><u>Shortest Path In A Weighted Graph</u><br>
+  		 In technical terms, it can be said as the shortest path that we can traverse between any two vertices starting from one and leading to other.<br><br>
+	<img src="images/w1.png">
+  </p>
+  </div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 8</div>
+  <div class="text">
+  	<p><u>Shortest path in a weighted Graph</u>(Hands On Implementation)<br>
+  		 <br><br>
+  		 <img src="images/ex.jpg">
+  	</p>
+  </div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">6 / 8</div>
+  <img src="" style="width:100%">
+  <div class="text">
+  	<p>Step 1: Consider two sets P and T. P contains those points which have been used while the T contains unused points/value.<br>
+  	Step 2: Let the distance between adjacents of vertex 0 be <br>
+  				L(7)=weight=8;<br>
+  				L(1)=weight=4;// Also tells the distance between vertex 0 and vertex 1.<br>
+  				while others<br>
+  				L(2)=L(3)=L(4)=L(5)=L(6)=L(8)= infinite;<br>
+  	Step 3: Find the Element having minimum value and put it in the set P.<br>
+  			Now here P={0,1} T={2,3,4,5,6,8}<br>
+  	Step 4: Suppose we want to find shortest path from 0 to 4. So we need to find the element having minimum value 
+  	put it in P. Repeat until 4 comes in the set P.<br>
+  	<img src="images/ex1.jpg">
+  </div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">7 / 8</div>
+  <div class="text">
+  	Step 5: *IMPORTANT*FORMULA*
+  	L1(x)
 
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="images/img_mountains_wide.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-</section>
-<section>
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="images/img_mountains_wide.jpg" style="width:100%">
-  <div class="text"></div>
-</div>
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="images/img_mountains_wide.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="images/myexampleimage.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="images/img_mountains_wide.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
+  </div>
 </div>
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
   <div style="text-align: center;">
-  Thanks A Lot Folks!
+  		That's all for today.
+  		Thanks A Lot Folks!
   </div>
-  <img src="images/hi.jpg" style="width:50%;margin-left:265px;">
 </div>
-</section>
 <div>
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -180,7 +214,13 @@ img {
   <span class="dot" onclick="currentSlide(7)"></span> 
   <span class="dot" onclick="currentSlide(8)"></span> 
 </div>
+<div>
 <p>Shortest Path In Weighted Graphs|Eulerian & Hamiltonian<br>Paths & Circuits|Konigsberg Bridge</p>
+
+<p style="line-height: 1.4rem;letter-spacing: 0.5rem;">Anshul Gupta|Aayushi Bansal|Shriya Verma</p>
+<p style="text-align: center;line-height: 1.4rem;letter-spacing: 0.5rem;">CO18311|CO18303|CO18347</p>
+<p>Faculty Mentor: Mr. Amit Chabbra</p>
+</div>
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);
