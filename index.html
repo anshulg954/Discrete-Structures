@@ -18,7 +18,7 @@ body{
       background-image: url(images/bg.jpg); width:100%;
  }
 h1{
-  font-size: 3.1rem;
+  font-size: 4.1rem;
   line-height: 1.4rem;
   letter-spacing: 0.5rem;
   text-align: center;
@@ -39,11 +39,12 @@ p{
   height: 700px;
 }
 .ccetlogo{	
+ 	display: block;	
   height: 80%;
-  width: 19%;
-  margin-left: 650px;
-  padding-top: 20px;
-  align-items: center;
+  width: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
 }
 /* Slideshow container */
 .slideshow-container {
@@ -81,8 +82,9 @@ p{
   color: black;
   font-size: 15px;
   padding: 8px 12px;
-    width: 100%;
+  width: 100%;
   text-align: center;
+  letter-spacing: 0.2rem;
 }
 /* Number text (1/3 etc) */
 .numbertext {
@@ -131,10 +133,10 @@ p{
 		<h1>DISCRETE STRUCTURES</h1>
 </div>		
 <div class="mySlides fade">
-  <div class="numbertext">1 / 11</div>
+  <div class="numbertext">1 / 18</div>
 </div>
 <div class="mySlides fade">
-  <div class="numbertext">2 / 11</div>
+  <div class="numbertext">2 / 18</div>
   <div class="text">
   	<p><u>Weighted Graph?</u>
   	A graph having weights i.e. a certain value assigned to the edges.<br><br><br>
@@ -143,7 +145,7 @@ p{
   </div>
 </div>
 <div class="mySlides fade">
-  <div class="numbertext">3 / 11</div>
+  <div class="numbertext">3 / 18</div>
   <div class="text">
   	<p><u>Shortest Path</u><br>
   		It is the path that one can take to travel the minimum distance in order to reach a particular destination.<br><br>
@@ -151,7 +153,7 @@ p{
   </div>
 </div>
 <div class="mySlides fade">
-  <div class="numbertext">4 / 11</div>
+  <div class="numbertext">4 / 18</div>
   <div class="text">
   	<p><u>Shortest Path In A Weighted Graph</u><br>
   		 In technical terms, it can be said as the shortest path that we can traverse between any two vertices starting from one and leading to other.<br><br>
@@ -160,7 +162,7 @@ p{
   </div>
 </div>
 <div class="mySlides fade">
-  <div class="numbertext">5 / 11</div>
+  <div class="numbertext">5 / 18</div>
   <div class="text">
   	<p><u>Shortest path in a weighted Graph</u>(Hands On Implementation)<br>
   		 <br><br>
@@ -169,7 +171,7 @@ p{
   </div>
 </div>
 <div class="mySlides fade">
-  <div class="numbertext">6 / 11</div>
+  <div class="numbertext">6 / 18</div>
   <img src="" style="width:100%">
   <div class="text">
   	<p>Step 1: Consider two sets P and T. P contains those points which have been used while the T contains unused points/value.<br>
@@ -178,38 +180,140 @@ p{
   				L(1)=weight=4;// Also tells the distance between vertex 0 and vertex 1.<br>
   				while others<br>
   				L(2)=L(3)=L(4)=L(5)=L(6)=L(8)= infinite;<br>
-  	Step 3: Find the Element having minimum value and put it in the set P.<br>
-  			Now here P={0,1} T={2,3,4,5,6,8}<br>
+  	Step 3: Find the Element having minimum value among all and put it in the set P.<br>
+  			Now here P={0,1} T={2,3,4,5,6,7,8}<br>
   	Step 4: Suppose we want to find shortest path from 0 to 4. So we need to find the element having minimum value 
   	put it in P. Repeat until 4 comes in the set P.<br>
-  	<img src="images/ex1.jpg">
+  	<img src="images/ex1.jpg" style="width: 10%;height: 20%">
   </div>
 </div>
 <div class="mySlides fade">
-  <div class="numbertext">7 / 11</div>
-  <div class="text">
-  	Step 5: *IMPORTANT*FORMULA*
-  	L1(x)
+  <div class="numbertext">7 / 18</div>
+  <div class="text"><p>
+  	Step 5: *IMPORTANT*FORMULA*<br>
+  		L1(x)=min[L(x),L(prev)+W(x,prev)], where x belongs to T and previous belong to P.<br>
+ 		SO Here L1(2)=min[L(2),L(1)+8]=min[infinite,4+8]=12<br>
+ 		Similarly,<br>
+ 		L1(3)=min[infinite,4+infinite]=infinite<br>
+ 		L1(4)=min[infinite,4+infinite]=infinite<br>
+ 		L1(5)=min[infinite,4+infinite]=infinite<br>
+ 		L1(6)=min[infinite,4+infinite]=infinite<br>
+ 		L1(7)=min[8,4+11]=8<br>
+ 		L1(8)=min[infinite,4+infinite]=infinite<br>
+ 		Since L1(7) is minimum amongst all L1 so we put 7 in P i.e.<br>
+ 		P={0,1,7} AND T={2,3,4,5,6,8}<br></p>
+ 		<img src="images/ex2.jpg" style="width: 20%;height: 10%">
+  </div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">8 / 18</div>
+  <div class="text"><p>
+  	Step 6: Find L2<br>
+  		L2(x)=min[L1(x),L1(prev)+W(x,prev)], where x belongs to T and previous belong to P.<br>
+ 		SO Here L2(2)=min[L(2),L1(7)+infinite]=min[12,8+infinite]=12<br>
+ 		Similarly,<br>
+ 		L2(3)=min[infinite,8+infinite]=infinite<br>
+ 		L2(4)=min[infinite,8+infinite]=infinite<br>
+ 		L2(5)=min[infinite,8+infinite]=infinite<br>
+ 		L2(6)=min[infinite,8+1]=9<br>
+ 		L2(8)=min[infinite,8+7]=15<br>
+ 		Since L2(6) is minimum amongst all L2 so we put 6 in P i.e.<br>
+ 		P={0,1,7,6} AND T={2,3,4,5,8}<br></p>
+ 		<img src="images/ex3.jpg" style="width: 20%;height: 10%">
+  </div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">9 / 18</div>
+  <div class="text"><p>
+  	Step 7: Find L3<br>
+  		L3(x)=min[L2(x),L2(prev)+W(x,prev)], where x belongs to T and previous belong to P.<br>
+ 		SO Here L3(2)=min[L2(2),L2(6)+W(2,6)]=min[12,9+infinite]=12<br>
+ 		Similarly,<br>
+ 		L3(3)=min[infinite,9+infinite]=infinite<br>
+ 		L3(4)=min[infinite,9+infinite]=infinite<br>
+ 		L3(5)=min[infinite,9+2]=11<br>
+ 		L3(8)=min[15,9+6]=15<br>
+ 		Since L3(5) is minimum amongst all L3 so we put 5 in P i.e.<br>
+ 		P={0,1,7,6,5} AND T={2,3,4,8}<br></p>
+ 		<img src="images/ex4.jpg"style="width: 20%;height: 10%">
+ </div> 
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">10 / 18</div>
+  <div class="text"><p>
+  	Step 8: Find L4<br>
+  		L4(x)=min[L3(x),L3(prev)+W(x,prev)], where x belongs to T and previous belong to P.<br>
+ 		SO Here L4(2)=min[L3(2),L3(5)+W(2,5)]=min[12,11+4]=12<br>
+ 		Similarly,<br>
+ 		L4(3)=min[infinite,11+14]=25<br>
+ 		L4(4)=min[infinite,11+10]=21<br>
+ 		L4(8)=min[15,11+infinite]=15<br>
+ 		Since L4(2) is minimum amongst all L4 so we put 2 in P i.e.<br>
+ 		P={0,1,7,6,5,2} AND T={3,4,8}<br></p>
+ </div> 
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">11 / 18</div>
+  <div class="text"><p>
+  	Step 9: Find L5<br>
+  		L5(x)=min[L4(x),L4(prev)+W(x,prev)], where x belongs to T and previous belong to P.<br>
+ 		SO Here L5(3)=min[L4(3),L4(2)+W(3,2)]=min[25,12+7]=19<br>
+ 		Similarly,<br>
+ 		L5(4)=min[21,12+infinite]=21<br>
+ 		L5(8)=min[15,12+2]=14<br>
+ 		Since L5(8) is minimum amongst all L5 so we put 8 in P i.e.<br>
+ 		P={0,1,7,6,5,2,8} AND T={3,4}<br></p>
+ </div> 
+</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">12 / 18</div>
+  <div class="text"><p>
+  	Step 10: Find L6<br>
+  		L6(x)=min[L5(x),L5(prev)+W(x,prev)], where x belongs to T and previous belong to P.<br>
+ 		SO Here L6(3)=min[L5(3),L5(8)+W(3,8)]=min[19,14+infinite]=19<br>
+ 		Similarly,<br>
+ 		L6(4)=min[21,14+infinite]=21<br>
+ 		Since L6(3) is minimum amongst all L6 so we put 3 in P i.e.<br>
+ 		P={0,1,7,6,5,2,8,3} AND T={4}<br></p>
+ </div> 
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">13 / 18</div>
+  <div class="text"><p>
+  	Step 11: Find L7<br>
+  		L7(x)=min[L6(x),L6(prev)+W(x,prev)], where x belongs to T and previous belong to P.<br>
+ 		SO Here L7(4)=min[L6(4),L6(3)+W(4,3)]=min[21,19+9]=21<br>
+ 		Since there are no elements left so we put 4 in P i.e.<br>
+ 		P={0,1,7,6,5,2,8,3,4} AND T={}<br>
+ 			SO, Now we can say starting from 0TH vertex, the shortest distance between<br>
+ 			V(0,1)= 4 UNITS  [PATH BEING 0->1]<br>
+ 			V(0,2)= 12 UNITS [PATH BEING 0->1->2] <br>
+ 			V(0,3)= 19 UNITS [PATH BEING 0->1->2->3]<br>
+ 			V(0,4)= 21 UNITS [PATH BEING 0->7->6->5->4]<br>
+ 			V(0,5)= 11 UNITS [PATH BEING 0->7->6->5]<br>
+			V(0,6)= 9 UNITS  [PATH BEING 0->7->6]<br>
+ 			V(0,7)= 8 UNITS  [PATH BEING 0->7]<br>
+ 			V(0,8)= 14 UNITS [PATH BEING 0->1->2->8]<br>
+	</p>
+ 		<img src="images/ex5.jpg" style="width: 20%;height: 10%">
+ </div> 
+</div>
 
-  </div>
-</div>
 <div class="mySlides fade">
-  <div class="numbertext">8 / 11</div>
+  <div class="numbertext">14 / 18</div>
   <div class="text"><p><u>Euler Paths and Circuits</u><br><br>
     An Euler path is a path using every    
 edge of the graph G exactly once.<br>
 An Euler circuit is an Euler path 
 that returns and end at the same vertex. 
-
+</p>
 <img src="images/pic1.jpg" width="220px" style="margin-left:30px;margin-top: 100px";>
 <img src="images/pic2.jpg" width="280px" style="margin-left: 300px;">
-</p>
-
-
   </div>
 </div>
 <div class="mySlides fade">
-  <div class="numbertext">9 / 11</div>
+  <div class="numbertext">15 / 18</div>
 <div class="text">
 <p><u>Necessary and Sufficient Conditions</u><br><br>
   The graph must be connected.<br>
@@ -218,7 +322,7 @@ that returns and end at the same vertex.
 </p>
 </div></div>
 <div class="mySlides fade">
-  <div class="numbertext">9 / 11</div>
+  <div class="numbertext">16 / 18</div>
 <div class="text"><h1><b><u>Examples</u></b></h1>
 
     <p align="left">Which of the following graphs has an Euler path?
@@ -228,7 +332,7 @@ Which of the following graphs has an Euler circuit?</p>
   <img src="images/ex2.jpg" width="700px" style="margin-left: 700px";></div>
 </div></div>
 <div class="mySlides fade">
-  <div class="numbertext">10 / 11</div>
+  <div class="numbertext">17 / 18</div>
   <div class="text"><p><u>Hamilton Paths and Circuits</u><br><br>
     A Hamilton path in a graph G is a
  path which visits every vertex in G 
@@ -242,10 +346,20 @@ A Hamilton circuit is a circuit that visits every vertex in G exactly and starts
   </div>
 </div>
 <div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
+  <div class="numbertext">18 / 18</div>
   <div style="text-align: center;">
-  		That's all for today.
-  		Thanks A Lot Folks!
+  		<p>
+  			<H1>REFERENCES</H1><br>	
+  			--><a href="https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/"> GeeksforGeeks</a><br>
+  			--><a href="https://www.w3schools.org">W3Schools </a><br>
+  		Thanks A Lot Folks!	<br>
+  		That's all for today.<br><br>
+  		Follow us on Github at:<br>
+ 		--><a href="https://www.Github.com/anshulg954" target="_blank">anshulg954</a><br>
+ 		--><a href="https://www.Github.com/aayushi1499">aayushi1499</a><br>
+ 		--><a href="https://www.Github.com/co18347">shriyaverma</a><br>
+  		</p>
+
   </div>
 </div>
 <div>
