@@ -114,6 +114,7 @@ p{
   animation-name: fade;
   animation-duration: 1.5s;
 }
+
 @-webkit-keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
@@ -130,10 +131,10 @@ p{
 		<h1>DISCRETE STRUCTURES</h1>
 </div>		
 <div class="mySlides fade">
-  <div class="numbertext">1 / 8</div>
+  <div class="numbertext">1 / 11</div>
 </div>
 <div class="mySlides fade">
-  <div class="numbertext">2 / 8</div>
+  <div class="numbertext">2 / 11</div>
   <div class="text">
   	<p><u>Weighted Graph?</u>
   	A graph having weights i.e. a certain value assigned to the edges.<br><br><br>
@@ -142,7 +143,7 @@ p{
   </div>
 </div>
 <div class="mySlides fade">
-  <div class="numbertext">3 / 8</div>
+  <div class="numbertext">3 / 11</div>
   <div class="text">
   	<p><u>Shortest Path</u><br>
   		It is the path that one can take to travel the minimum distance in order to reach a particular destination.<br><br>
@@ -150,7 +151,7 @@ p{
   </div>
 </div>
 <div class="mySlides fade">
-  <div class="numbertext">4 / 8</div>
+  <div class="numbertext">4 / 11</div>
   <div class="text">
   	<p><u>Shortest Path In A Weighted Graph</u><br>
   		 In technical terms, it can be said as the shortest path that we can traverse between any two vertices starting from one and leading to other.<br><br>
@@ -159,7 +160,7 @@ p{
   </div>
 </div>
 <div class="mySlides fade">
-  <div class="numbertext">5 / 8</div>
+  <div class="numbertext">5 / 11</div>
   <div class="text">
   	<p><u>Shortest path in a weighted Graph</u>(Hands On Implementation)<br>
   		 <br><br>
@@ -168,7 +169,7 @@ p{
   </div>
 </div>
 <div class="mySlides fade">
-  <div class="numbertext">6 / 8</div>
+  <div class="numbertext">6 / 11</div>
   <img src="" style="width:100%">
   <div class="text">
   	<p>Step 1: Consider two sets P and T. P contains those points which have been used while the T contains unused points/value.<br>
@@ -185,10 +186,58 @@ p{
   </div>
 </div>
 <div class="mySlides fade">
-  <div class="numbertext">7 / 8</div>
+  <div class="numbertext">7 / 11</div>
   <div class="text">
   	Step 5: *IMPORTANT*FORMULA*
   	L1(x)
+
+  </div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">8 / 11</div>
+  <div class="text"><p><u>Euler Paths and Circuits</u><br><br>
+    An Euler path is a path using every    
+edge of the graph G exactly once.<br>
+An Euler circuit is an Euler path 
+that returns and end at the same vertex. 
+
+<img src="images/pic1.jpg" width="220px" style="margin-left:30px;margin-top: 100px";>
+<img src="images/pic2.jpg" width="280px" style="margin-left: 300px;">
+</p>
+
+
+  </div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">9 / 11</div>
+<div class="text">
+<p><u>Necessary and Sufficient Conditions</u><br><br>
+  The graph must be connected.<br>
+  <b><u>THEOREM 1</u></b>-  A connected multigraph with at least two vertices has an Euler circuit if and only if each of its vertices has even degree.<br>
+  <b><u>THEOREM 2</u></b> -  A connected multigraph has an Euler path but not an Euler circuit if and only if it has exactly two vertices of odd degree.
+</p>
+</div></div>
+<div class="mySlides fade">
+  <div class="numbertext">9 / 11</div>
+<div class="text"><h1><b><u>Examples</u></b></h1>
+
+    <p align="left">Which of the following graphs has an Euler path?
+<img src="images/eg1.jpg" width="700px">
+
+Which of the following graphs has an Euler circuit?</p>
+  <img src="images/ex2.jpg" width="700px" style="margin-left: 700px";></div>
+</div></div>
+<div class="mySlides fade">
+  <div class="numbertext">10 / 11</div>
+  <div class="text"><p><u>Hamilton Paths and Circuits</u><br><br>
+    A Hamilton path in a graph G is a
+ path which visits every vertex in G 
+exactly.<br>
+A Hamilton circuit is a circuit that visits every vertex in G exactly and starts and ends at the same vertex.<br>
+<img src="images/ham.jpg" width="270px" style="margin-left:30px;margin-top: 100px";>
+<img src="images/ham1.jpg" width="300px" style="margin-left: 300px;">
+</p>
+
 
   </div>
 </div>
@@ -213,6 +262,9 @@ p{
   <span class="dot" onclick="currentSlide(6)"></span> 
   <span class="dot" onclick="currentSlide(7)"></span> 
   <span class="dot" onclick="currentSlide(8)"></span> 
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span> 
+  <span class="dot" onclick="currentSlide(11)"></span> 
 </div>
 <div>
 <p>Shortest Path In Weighted Graphs|Eulerian & Hamiltonian<br>Paths & Circuits|Konigsberg Bridge</p>
